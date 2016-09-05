@@ -1,0 +1,2 @@
+all:
+	g++ -o SOPWidg.wt SOPWidg.C PairWidg.C ArtistWidg.C -I/usr/local/include -L/usr/local/lib -lwthttp -lwt -lboost_random -lboost_regex -lboost_signals -lboost_system -lboost_thread -lboost_filesystem -lboost_program_options -lboost_date_time

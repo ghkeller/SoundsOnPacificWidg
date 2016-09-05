@@ -1,0 +1,21 @@
+.yellow-box {
+    margin-left: 1ex;
+    margin-right: 1ex;
+}
+
+.name-box {
+    text-align: left;
+    padding: 3px;
+}
+
+.desc-box {
+    text-align: left;
+    padding: 3px;
+}
+
+.bio-box {
+    background-color: #ffffb4;
+    text-indent: 40px;
+    text-align: left;
+    padding: 5px;
+}
