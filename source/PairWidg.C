@@ -1,6 +1,7 @@
 #include <Wt/WContainerWidget>
 #include <Wt/WHBoxLayout>
 #include <Wt/WGoogleMap>
+#include <Wt/WStackedWidget>
 
 #include "PairWidg.h"
 #include "ArtistWidg.h"
@@ -21,9 +22,16 @@ PairWidg::PairWidg(WContainerWidget *parent)
 	hbox2->addWidget(map_, 1);
 
 	Wt::WContainerWidget *insert = new Wt::WContainerWidget();
+	ArtistWidg *artist_widg = new ArtistWidg(insert, "Kevin", "Guitarist/Singer", "Kevin is a wonderful musician with a wide variety of material. He croons loudly, passionately, and fervorously. The time that you spend listening to Kevin will be so goooood.");
+	Wt::WContainerWidget *insert2 = new Wt::WContainerWidget();
+	ArtistWidg *artist_widg1 = new ArtistWidg(insert2, "Koovin", "Guitarist/Singer", "Kevin is a wonderful musician with a wide variety of material. He croons loudly, passionately, and fervorously. The time that you spend listening to Kevin will be so goooood.");
 
-	ArtistWidg *artist_widg = new ArtistWidg(insert, "Kevin");
-	hbox2->addWidget(insert);
+	Wt::WStackedWidget *stack = new Wt::WStackedWidget();
+	stack->addWidget(insert);
+	stack->addWidget(insert2);
+	stack->setCurrentIndex(1);
+
+	hbox2->addWidget(stack);
 	//container->addWidget(artist_widg);
 
 	parent->addWidget(container);

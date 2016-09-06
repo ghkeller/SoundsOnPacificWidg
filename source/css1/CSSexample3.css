@@ -19,3 +19,8 @@
     text-align: left;
     padding: 5px;
 }
+
+.pw {
+    background-image: url("pw_bckgnd.png");
+    background-color: #cccccc;
+}

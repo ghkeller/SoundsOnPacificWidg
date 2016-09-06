@@ -1,15 +1,17 @@
 #include <Wt/WApplication>
+#include <Wt/WCssDecorationStyle>
+
 
 #include "PairWidg.h"
 
 Wt::WApplication *createApplication(const Wt::WEnvironment& env)
 {
   Wt::WApplication *app = new Wt::WApplication(env);
-  app->setTitle("SOPWidg");
+  app->setTitle("Sounds On Pacific");
 
   app->instance()->useStyleSheet("css1/CSSexample3.css");
 
-  new PairWidg(app->root());
+  PairWidg *pw = new PairWidg(app->root());
 
   return app;
 }

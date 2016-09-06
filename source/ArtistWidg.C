@@ -9,8 +9,8 @@
 
 #include "ArtistWidg.h"
 
-ArtistWidg::ArtistWidg(WContainerWidget *parent, char* name)
-    : WContainerWidget(parent), artist_name(name)
+ArtistWidg::ArtistWidg(WContainerWidget *parent, char* name, char* desc, char* bio)
+    : WContainerWidget(parent), artist_name(name), artist_desc(desc), artist_bio(bio)
 {
 	container = new Wt::WContainerWidget();
 	container->setStyleClass("yellow-box centered");
@@ -33,11 +33,11 @@ ArtistWidg::ArtistWidg(WContainerWidget *parent, char* name)
 	item->setStyleClass("name-box");
 	vbox->addWidget(item, 1);
 
-	item = new Wt::WText("Guitarist/Singer");
+	item = new Wt::WText(artist_desc);
 	item->setStyleClass("desc-box");
 	vbox->addWidget(item);
 
-	item = new Wt::WText("Kevin is a wonderful musician with a wide variety of material. He croons loudly, passionately, and fervorously. The time that you spend listening to Kevin will be so goooood.");
+	item = new Wt::WText(artist_bio);
 	item->setStyleClass("bio-box");
 	vbox1->addWidget(item);
 
